@@ -1,6 +1,6 @@
 #!/bin/bash
 cp -r ~/.config/nvim ~/dotfiles
-cp -r ~/.tmux.conf ~/dotfiles
+cp -r ~/.config/tmux ~/dotfiles
 
 cd ~/dotfiles
 git add --all
