@@ -6,13 +6,14 @@ return {
       opts.float = {
         transparent = true,
       }
+      opts.integrations = { blink_cmp = true }
       return opts
     end,
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-frappe",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }
