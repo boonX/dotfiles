@@ -2,7 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- local map = vim.keymap.set
+local map = vim.keymap.set
 
--- map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
--- map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
+-- Map <leader>P to run "0p
+map("n", "<leader>P", '"0p', { desc = "Paste from register 0" })
