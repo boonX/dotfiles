@@ -67,6 +67,12 @@ return {
   --     dim_inactive = true,
   --   },
   -- },
+  -- {
+  --   "wtfox/jellybeans.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {}, -- Optional
+  -- },
   {
     "Shatur/neovim-ayu",
     lazy = false,
