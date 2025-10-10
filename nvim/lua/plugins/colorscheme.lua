@@ -73,6 +73,14 @@ return {
   --   priority = 1000,
   --   opts = {}, -- Optional
   -- },
+  -- {
+  --   "thesimonho/kanagawa-paper.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     dim_inactive = true,
+  --   },
+  -- },
   {
     "Shatur/neovim-ayu",
     lazy = false,
@@ -81,23 +89,27 @@ return {
       require("ayu").setup({
         mirage = true,
         overrides = function()
-          if vim.o.background == "dark" then
-            return { NormalNC = { bg = "#0f151e", fg = "#808080" } }
-          else
-            return { NormalNC = { bg = "#f0f0f0", fg = "#808080" } }
-          end
+          -- if vim.o.background == "dark" then
+          --   return { NormalNC = { bg = "#0f151e", fg = "#808080" } }
+          -- else
+          --   return { NormalNC = { bg = "#f0f0f0", fg = "#808080" } }
+          -- end
+          return {
+            -- Changes color of inactive windows
+            NormalNC = { bg = "#0f151e", fg = "#808080" },
+
+            -- General
+            Comment = { fg = "#99a3b0" },
+            LineNr = { fg = "#636363" },
+
+            -- Flash.nvim
+            FlashCurrent = { fg = "#ffffff" },
+            FlashMatch = { fg = "#ffffff" },
+          }
         end,
       })
       vim.cmd("colorscheme ayu") -- set the colorscheme
     end,
-  },
-  {
-    "thesimonho/kanagawa-paper.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      dim_inactive = true,
-    },
   },
   {
     "LazyVim/LazyVim",
