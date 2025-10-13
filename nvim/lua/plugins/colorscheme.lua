@@ -105,6 +105,7 @@ return {
             -- Flash.nvim
             FlashCurrent = { fg = "#ffffff" },
             FlashMatch = { fg = "#ffffff" },
+            FlashLabel = { bg = "#ffffff", fg = "#000000" },
           }
         end,
       })
