@@ -1,4 +1,28 @@
 return {
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = function()
+        require("catppuccin").load()
+      end,
+    },
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    opts = {
+      no_italic = true,
+      term_colors = true,
+      transparent_background = false,
+      custom_highlights = {
+        LineNr = { fg = "#636363" },
+      },
+      integrations = {
+        blink_cmp = true,
+      },
+    },
+  },
   -- {
   --   "catppuccin/nvim",
   --   opts = function(_, opts)
@@ -7,8 +31,38 @@ return {
   --       transparent = true,
   --     }
   --     opts.integrations = { blink_cmp = true }
+  --     opts.color_overrides = {
+  --       mocha = {
+  --         base = "#000000",
+  --         mantle = "#000000",
+  --         crust = "#000000",
+  --       },
+  --     }
+  --     opts.custom_highlights = {
+  --       LineNr = { fg = "#636363" },
+  --     }
   --     return opts
   --   end,
+  -- },
+  -- {
+  --   "catppuccin/nvim",
+  --   name = "catppuccin",
+  --   priority = 1000,
+  --   opts = {
+  --     no_italic = true,
+  --     term_colors = true,
+  --     transparent_background = false,
+  --     color_overrides = {
+  --       mocha = {
+  --         base = "#000000",
+  --         mantle = "#000000",
+  --         crust = "#000000",
+  --       },
+  --     },
+  --     integrations = {
+  --       blink_cmp = true,
+  --     },
+  --   },
   -- },
   -- {
   --   "AlexvZyl/nordic.nvim",
@@ -81,42 +135,36 @@ return {
   --     dim_inactive = true,
   --   },
   -- },
-  {
-    "Shatur/neovim-ayu",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("ayu").setup({
-        -- mirage = true,
-        terminal = false,
-        overrides = function()
-          local overrides = {
-            -- General
-            Comment = { fg = "#99a3b0" },
-            LineNr = { fg = "#636363" },
-
-            -- Flash.nvim
-            FlashCurrent = { fg = "#ffffff" },
-            FlashMatch = { fg = "#ffffff" },
-            FlashLabel = { bg = "#ffffff", fg = "#000000" },
-          }
-
-          -- Changes color of inactive windows
-          if vim.o.background == "dark" then
-            overrides.NormalNC = { bg = "#0f151e", fg = "#808080" }
-          else
-            overrides.NormalNC = { bg = "#f0f0f0", fg = "#808080" }
-          end
-
-          return overrides
-        end,
-      })
-    end,
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "ayu",
-    },
-  },
+  -- {
+  --   "Shatur/neovim-ayu",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require("ayu").setup({
+  --       -- mirage = true,
+  --       terminal = false,
+  --       overrides = function()
+  --         local overrides = {
+  --           -- General
+  --           Comment = { fg = "#99a3b0" },
+  --           LineNr = { fg = "#636363" },
+  --
+  --           -- Flash.nvim
+  --           FlashCurrent = { fg = "#ffffff" },
+  --           FlashMatch = { fg = "#ffffff" },
+  --           FlashLabel = { bg = "#ffffff", fg = "#000000" },
+  --         }
+  --
+  --         -- Changes color of inactive windows
+  --         if vim.o.background == "dark" then
+  --           overrides.NormalNC = { bg = "#0f151e", fg = "#808080" }
+  --         else
+  --           overrides.NormalNC = { bg = "#f0f0f0", fg = "#808080" }
+  --         end
+  --
+  --         return overrides
+  --       end,
+  --     })
+  --   end,
+  -- },
 }
