@@ -21,6 +21,14 @@ return {
       integrations = {
         blink_cmp = true,
       },
+      auto_integrations = true,
+      -- color_overrides = {
+      --   mocha = {
+      --     base = "#151515",
+      --     mantle = "#0e0e0e",
+      --     crust = "#080808",
+      --   },
+      -- },
     },
   },
   -- {

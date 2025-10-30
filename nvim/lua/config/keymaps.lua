@@ -10,3 +10,8 @@ map("n", "<leader>P", '"0p', { desc = "Paste from register 0" })
 -- Remap Ctrl-d and Ctrl-u to center the cursor after moving
 map("n", "<C-d>", "<C-d>zz", { desc = "Center cursor after moving down half-page" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Center cursor after moving up half-page" })
+
+map("n", "<leader>gq", function()
+  vim.cmd('cexpr system("git diff --check --relative")')
+  vim.cmd("copen")
+end, { desc = "Git conflicts to quickfix" })
