@@ -1,0 +1,9 @@
+# Include in ~/.gitconfig
+# [include]
+#   path = ~/.git-aliases
+
+[alias]
+  lastlog = log -1
+  onelog = log --oneline
+  stiff = diff --staged
+  nam = commit --amend --no-verify
