@@ -4,6 +4,7 @@
 
 [alias]
   lastlog = log -1
+  br = branch
   onelog = log --oneline
   stiff = diff --staged
   nam = commit --amend --no-verify
