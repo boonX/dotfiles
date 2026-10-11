@@ -88,10 +88,11 @@ menu menuitem:hover {
 #workspaces button {
   padding: 2px 8px;
   margin: 2px;
-  border-radius: 8px;
+  border-radius: 0;
+  border-bottom: 1px solid transparent;
   color: @subtext1;
   font-size: 20px;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease;
 }
 
 #workspaces button.empty {
@@ -100,11 +101,9 @@ menu menuitem:hover {
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: @peach;
-  color: @crust;
+  color: @peach;
   font-weight: bold;
-  border-radius: 6px;
-  min-width: 12px;
+  border-bottom-color: @peach;
 }
 
 #workspaces button.urgent {
