@@ -8,3 +8,5 @@
   onelog = log --oneline
   stiff = diff --staged
   nam = commit --amend --no-verify
+  co = checkout
+  cp = cherry-pick
