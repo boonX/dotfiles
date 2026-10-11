@@ -100,8 +100,11 @@ menu menuitem:hover {
 
 #workspaces button.focused,
 #workspaces button.active {
-  color: @peach;
+  background-color: @peach;
+  color: @crust;
   font-weight: bold;
+  border-radius: 6px;
+  min-width: 12px;
 }
 
 #workspaces button.urgent {
