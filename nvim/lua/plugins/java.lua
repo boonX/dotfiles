@@ -5,28 +5,6 @@ return {
       -- https://github.com/eclipse-jdtls/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
       settings = {
         java = {
-          format = {
-            enabled = true,
-            settings = {
-              url = "/home/fjoe/.config/nvim/formatting/GoogleStyle_BOX_eclipse.xml",
-            },
-          },
-          configuration = {
-            runtimes = {
-              {
-                name = "JavaSE-17",
-                path = "/home/fjoe/.sdkman/candidates/java/17.0.11-amzn/",
-              },
-              {
-                name = "JavaSE-21",
-                path = "/home/fjoe/.sdkman/candidates/java/21.0.3-amzn/",
-              },
-              {
-                name = "JavaSE-25",
-                path = "/home/fjoe/.sdkman/candidates/java/25-amzn/",
-              },
-            },
-          },
           saveActions = {
             organizeImports = true,
             cleanup = true,
