@@ -118,6 +118,15 @@ menu menuitem:hover {
   font-weight: bold;
 }
 
+/* ---------- language ---------- */
+
+#language {
+  color: @teal;
+  padding: 4px 12px;
+  margin: 4px 3px;
+  border-radius: 10px;
+}
+
 /* ---------- pulseaudio ---------- */
 
 #pulseaudio {

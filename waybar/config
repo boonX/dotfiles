@@ -8,6 +8,7 @@
   "modules-right": [
     "group/expand",
     "tray",
+    "sway/language",
     "network",
     "pulseaudio#source",
     "battery",
@@ -58,6 +59,12 @@
     "scroll-step": 5,
     "on-click": "pavucontrol",
     "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+
+  "sway/language": {
+      "format": "⌨ {short}",
+      "tooltip": true,
+      "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
   },
 
   "battery": {
